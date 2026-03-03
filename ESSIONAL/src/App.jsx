@@ -1,33 +1,40 @@
-import { useState } from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import TopStatusBar from "./components/TopStatusBar/TopStatusBar.jsx";
+import './index.css';
+import Analysis from "./pages/Analysis/Analysis.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <BrowserRouter>
+            <div className="app-container">
+                {/* 상단 상태바 */}
+                <TopStatusBar />
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+                {/* 사이드바 + 메인 콘텐츠 */}
+                <div className="content-wrapper">
+                    <Sidebar />
+
+                    <main className="main-content">
+                        <Routes>
+                            <Route path="/dashboard" element={<h1>Dashboard 페이지</h1>} />
+                            <Route path="/analysis" element={<Analysis/>} />
+                            <Route path="/issue-log" element={<h1>Issue Log 페이지</h1>} />
+                        </Routes>
+                    </main>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+

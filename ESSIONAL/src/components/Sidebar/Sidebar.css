@@ -1,0 +1,94 @@
+/* ==================== Sidebar ==================== */
+.sidebar {
+    border-radius: 16px;
+    width: 280px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 50px;
+    padding: 15px;
+    max-height: calc(100vh - 100px);
+}
+
+/* 로고 영역 */
+.sidebar-logo {
+    padding: 28px 24px 20px;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* 네비게이션 */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    flex: 1;
+    gap: 8px;
+}
+
+/* 메뉴 링크 */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    color: #999;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* 활성화된 링크 */
+.sidebar-link.active {
+    background: #EBF2FF;
+    color: var(--primary-blue);
+}
+
+/* Hover 효과 */
+.sidebar-link:hover:not(.active) {
+    background: #F0F1F3;
+    color: #666;
+}
+
+/* 알림 점 (Issue log) */
+.notification-dot {
+    width: 7px;
+    height: 7px;
+    background: #F44336;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+/* 하단 영역 */
+.sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #EEEEF0;
+}
+
+.sidebar-settings {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-content);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar-settings:hover {
+    background: #F0F1F3;
+}
