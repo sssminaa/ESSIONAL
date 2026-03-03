@@ -1,0 +1,111 @@
+/* ==================== App Layout ==================== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 50px;
+    overflow-y: auto;
+}
+
+/* ==================== Container ==================== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    width: 100%;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ==================== Page Header ==================== */
+/*.page-header {*/
+/*    margin-bottom: var(--spacing-xl);*/
+/*    padding-bottom: var(--spacing-lg);*/
+/*    border-bottom: 1px solid var(--border-light);*/
+/*}*/
+
+/*.page-header h1 {*/
+/*    font-size: 28px;*/
+/*    color: var(--text-primary);*/
+/*    font-weight: var(--font-weight-semibold);*/
+/*    margin-bottom: var(--spacing-sm);*/
+/*}*/
+
+/*.page-header .subtitle {*/
+/*    color: var(--text-secondary);*/
+/*    font-size: 14px;*/
+/*}*/
+
+/* ==================== Section ==================== */
+.section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ==================== Grid System ==================== */
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==================== Card ==================== */
+.card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.card-header {
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.card-body {
+    color: var(--text-secondary);
+}
